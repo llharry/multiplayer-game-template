@@ -1,0 +1,61 @@
+<div class="container">
+
+  <div id="game">
+    <h3 ng-hide="room === undefined">{{client.roomname}}</h3>
+
+    <div class="alert alert-danger" role="alert" ng-show="room === undefined">You are not in a room. <a href="/"><span class="glyphicon glyphicon-log-out"></span> Leave</a></div>
+    
+    <!--<div id="tags">
+      <div class="tooltip fade top in" ng-repeat="player in game.players">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">{{player.name}}</div>
+      </div>
+    </div>-->
+    
+    <canvas tabindex="0" ng-hide="room === undefined">Your browser doesn't support HTML5 canvas.</canvas>
+    
+  </div>
+
+</div>
+
+<div id="footer" ng-hide="room === undefined">
+  <div class="container">
+    <!-- player list -->
+    <div class="panel panel-default" id="playerlist">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> Players <span class="badge">{{room.players.length}}</span></h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li ng-repeat="player in room.players">{{player}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- viewer list -->
+    <div class="panel panel-default" id="viewerlist">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-eye-open"></span> Viewers <span class="badge">{{room.viewers.length}}</span></h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li ng-repeat="viewer in room.viewers">{{viewer}}</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- chat -->
+    <div class="panel panel-default" id="chat">
+      <div class="panel-heading"><h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Chat</h3></div>
+      <div class="panel-body">
+        <ul>
+          <li ng-repeat="row in chat"><span class="label label-default">{{row.author}}</span> {{row.message}}</li>
+        </ul>
+      </div>
+      <div class="panel-body">
+        <form>
+          <input type="text" class="form-control input-sm" id="chatMessage">
+        </form>
+      </div>
+    </div>
+  </div>

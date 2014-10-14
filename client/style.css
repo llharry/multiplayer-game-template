@@ -1,0 +1,105 @@
+*:focus {
+outline: none;
+}
+
+.navbar-brand {
+  color:#fff !important;
+}
+
+h3 {
+  margin-top:0;
+  margin-bottom:20px;
+}
+
+.tooltip-inner {
+  text-align: left;
+}
+
+tbody#rooms {
+  height:100px;
+  overflow-y:auto;
+}
+
+/* Game */
+/* Players, viewers, chat */
+#footer {
+  position: absolute;
+  bottom:0;
+  width:100%;
+}
+
+#playerlist {
+  float:left;
+  width:14%;
+}
+
+#viewerlist {
+  float:left;
+  width:14%;
+  margin-left:1%;
+}
+
+#chat {
+  float:left;
+  width:70%;
+  margin-left:1%;
+}
+
+#playerlist, #viewerlist, #chat {
+  height:150px;
+}
+
+.panel-heading {
+  padding:7px 10px;
+}
+
+.panel-title {
+  font-size:14px;
+}
+
+#playerlist .badge, #viewerlist .badge {
+  margin:-3px 0;
+}
+
+#playerlist .panel-body, #viewerlist .panel-body, #chat .panel-body:nth-child(2) {
+  position:relative;
+  overflow: auto;
+  padding:0;
+}
+
+#playerlist .panel-body > ul, #viewerlist .panel-body > ul, #chat .panel-body:nth-child(2) > ul {
+  list-style:none;
+  margin:0;
+  padding:5px 10px;
+}
+
+#playerlist .panel-body > ul, #viewerlist .panel-body > ul {
+  white-space: nowrap;
+}
+
+#playerlist .panel-body, #viewerlist .panel-body {
+  height:117px;
+}
+
+#chat .panel-body:nth-child(2) {
+  height:78px;
+}
+
+#chat .panel-body:nth-child(3) {
+  padding: 5px 12px;
+}
+
+#game canvas {
+  position:absolute;
+  left:0;
+  width:100%;
+  border-top:2px solid #000;
+  border-bottom:2px solid #000;
+}
+
+/*#tags {
+  position:absolute;
+  left:0;
+  width:100%;
+  overflow:hidden;
+}*/

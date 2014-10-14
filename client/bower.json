@@ -1,0 +1,22 @@
+{
+  "name": "multiplayer-game-template",
+  "version": "0.0.0",
+  "authors": [
+    "Owumaro <antoinematyja@free.fr>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "~1.2.26",
+    "angular-route": "~1.2.26",
+    "angular-bootstrap": "~0.11.2",
+    "jquery": "~2.1.1"
+  }
+}
